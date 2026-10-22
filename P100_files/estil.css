@@ -1,0 +1,253 @@
+html, body { height: 100%; margin:0; padding:0; }
+
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #ddd;
+	background-color: #333;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+form
+{
+	border: 0; margin: 0; padding: 0;
+}
+
+input, select, textarea
+{
+	margin: 0;
+	font-weight: normal;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+}
+
+h1 { margin-top: 2px; margin-bottom: 2px; color: #ff6961; }
+h1.noactual { text-decoration: blink ; color: #ff6961; }
+
+.dreta    { text-align: right; }
+.centrat  { text-align: center; }
+.esquerra { text-align: left; }
+.petit    { font-size:  90%; }
+
+img
+{
+	border: 0; margin: 0; padding: 0;
+}
+
+
+table
+{
+	border: 0px;
+	padding: 0;
+ 	border-collapse: collapse; 
+	border-spacing: 0px; 
+        margin: 0px auto; 
+}
+
+.center   { margin: auto auto; height: 100%; }
+.nocenter { margin-left: 5px; }
+
+table.pyval { border: 1px dotted #ccc; }
+table.pyval th { font-weight: bold; }
+table.pyval td { border: 1px dotted #ccc; }
+table.pyval caption { text-align: left; font-weight: normal; font-size: 140%; margin-bottom: 7px; margin-top: 20px; }
+
+table.pyvale    { border: 1px dotted #ccc; margin-left: 20px; text-align:left; }
+table.pyvale th { font-weight: bold; }
+table.pyvale td { border: 1px dotted #ccc; }
+table.pyvale caption { text-align:left; font-weight: normal; font-size: 140%; margin-bottom: 7px; margin-top: 20px; }
+table.pyvale tr.ok   { color: #b9e6c9; border: 1px dotted #ccc; font-weight: bold }
+table.pyvale tr.ok a { color: #b9e6c9; font-weight: bold } 
+
+/* table.pyvale tr.ok { background-color: #b9e6c9; color: #333; border: 1px dotted #ccc; }
+table.pyvale tr.ok a { color: #333; }
+*/
+
+table.compacta { border: 0px; }
+table.compacta td { padding: 2px; }
+
+caption {
+	margin-left: auto;
+	margin-right: auto;
+	/*font-weight: medium;*/
+}
+
+th { padding: 10px 5px; }
+
+td
+{
+	text-align: left;
+	padding: 8px 5px;
+}
+
+
+tr
+{
+	/*border: 1;*/
+	margin: 0;
+	padding: 0;
+}
+
+
+/* PER A TAULES DE DADES */
+.dades {
+}
+
+.dades td {
+	padding: 0 5px 0 5px;
+}
+
+tr.impar       { background-color: #333; border: 1px solid #777; }
+tr.impar:hover { background-color: #555; }
+
+tr.par         { background-color: #444; border: 1px solid #777; }
+tr.par:hover   { background-color: #555; }
+
+
+tr.mal         { background: lightgreen; color: #333; border: 1px solid #777; }
+tr.mal:hover   { background-color: #555; }
+
+tr.total       { font-weight: bold; }
+
+.dades th {
+	background: #FAB301;
+	padding: 0 5px 0 5px;
+	text-align: left;
+}
+
+th.num {
+	background: #FAB301;
+	color: #333;
+	padding: 0 5px 0 5px;
+	text-align: right;
+}
+
+.num {
+	text-align: right;
+	padding: 0 5px 0 5px;
+}
+
+input[type='file'] {
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	padding: 3px;
+	width: 20em;
+}
+
+
+a
+{
+	margin: 0;
+	border: 0;
+	padding: 0;
+	color: #888276;
+	color: #989286;
+	color: #555;
+ 	text-decoration: underline;
+
+}
+
+.ressaltar {
+	color: white;
+	font-weight: bold;
+}
+
+a         { color: white; text-decoration: none; }
+a:visited { color: white; text-decoration: none; }
+a:hover   { color: white; }
+
+#tabs
+{
+	padding: 4px 15px 0px 15px;
+	margin: 0px 0px 0px 0px;
+	height: 18px;
+	background: #FAB301;
+	clear: both;
+}
+
+.tab
+{
+	padding: 0px 3px 0px 3px;
+	background: url("img/bg_tab.gif");
+	background: white;
+}
+
+#tabs a
+{
+	color: #666666;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#tabs a:visited
+{
+	color: #666666;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#tabs a:hover
+{
+	color: #666666;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+.lb
+{
+
+	border: 1px solid #DDDDDD;
+	padding: 10px 15px 10px 15px;
+
+}
+
+.lb h2 {
+	font-family: trebuchet ms, arial, hevetica, sans-serif;
+	color: #555; 
+	font-size: 125%;
+	font-weight: bold;
+	margin: 0 0 8px 0;
+	padding: 0 0 8px 0;
+	border-bottom: 1px dotted #DDDDDD;
+}
+
+#container
+{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: left;
+	background: white;
+}
+
+a.subtitol {
+	color: green;
+}
+
+.resaltar {
+	color: red;
+	font-weight: bold;
+	text-decoration: blink;
+}
+
+.important {
+	color: red;
+	font-weight: bold;
+}
+
+.marcar {
+	background: red;
+	color: white;
+}
+
+.roig {
+	color: red;
+}
+
+sup {
+  color: green;
+}
+
