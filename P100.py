@@ -5,39 +5,44 @@ class P100:
         self.dato_l = int(datos[1])
         self.val = datos[2:]
         self.val = [int(j) for j in self.val]
+        self.memoizacion = {}
 
-        resultado = self.recursive(self.dato_n, self.val)
-        
+        mejor = self.recursive(self.dato_n, self.val)
+        resultado = sorted(i+1 for i in mejor[1])
+
         return resultado
 
     def quitar_dias(self, lista, m):
-        for i in range(0,min(self.dato_l, len(lista)-m-1)):
-            lista[m+i] = -1
-        for i in range(1, m-self.dato_l if m-self.dato_l>=0 else m):
-            lista[m-i] = -1
+        lista = lista.copy()
+        for i in range(max(0, m-self.dato_l+1), min(len(lista), m+self.dato_l)):
+            lista[i] = -1
         return lista
                 
     def recursive(self, n, dias):
         if n == 0:
-            print(f"Lista de n={n}: {dias}, {0}")
-            return [0, dias]
-        
+            return [0, []]
+
         else:
-            max = 0
-            lista = dias
+
+            memo = self.memoizacion.get([n,dias], False)
+            if memo:
+                return memo  
+
+            mejor = [0, []]
             for i in range(0,len(dias)):
-                rec = self.recursive(n-1, dias)
+                if dias[i] == -1:
+                    continue
+                rec = self.recursive(n-1, self.quitar_dias(dias, i))
                 nuevo = rec[0]+dias[i]
-                if nuevo >= max:
-                    max = nuevo
-                    lista = self.quitar_dias(rec[1], i)
-            print(f"Lista de n={n}: {lista}, {max}")
-            return [max, lista]
+                if nuevo > mejor[0]:
+                    mejor = [nuevo, rec[1] + [i]]
+
+            memo[[n, dias]] = mejor
+            return mejor
 
 def main():
     obj = P100()
-    print(obj.best_solution("2 3 1 7 4"))
-    print(obj.quitar_dias([0,1,2,3,4,5,6,7], 4))
+    print(obj.best_solution("20 2 1 2 4 7 3 5 7 2 4 9 4 5 2 2 3 5 9 1 0 7 8"))
 
 if __name__ == "__main__":
     main()
